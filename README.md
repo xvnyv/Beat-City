@@ -2,9 +2,10 @@
 
 An arcade-style game powered by an FPGA created for the 50.002 course in Fall 2020.
 
-<img src="images/front.jpg" style="width:49%"/>
-<img src="images/playing.jpg" style="width:50%"/>
-<br/><br/>
+<p float="left">
+<img src="images/front.jpg" style="width:30%"/>
+<img src="images/playing.jpg" style="width:30%"/>
+</p>
 
 ## Description
 
