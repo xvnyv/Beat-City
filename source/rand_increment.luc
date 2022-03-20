@@ -1,0 +1,50 @@
+module rand_increment
+#(
+SEED = 128h843233523a613966423b622562592c62: SEED.WIDTH == 128 && SEED[95:0] != 0
+  )
+  (
+    input clk,  // clock
+    input rst,
+    output out[2]
+  ) {
+
+  
+.clk(clk){
+   edge_detector edge_detector_rng;
+   edge_detector edge_detector_seed;
+   dff seed[3]; //don't reset the seed because we don't want the same random number each time we press reset
+    
+  .rst(rst){
+     counter slowerclock(#SIZE(1), #DIV(23)); //random increment always runs at the fastest speed, so we dont get least repeat values as possible
+     pn_gen random_number;
+    }
+ }
+  
+sig temp_pointer[2];
+  
+always {
+    out = 0;
+    random_number.next = 0;
+    random_number.seed = seed.q;
+    
+    edge_detector_rng.in = slowerclock.value;
+    random_number.next = edge_detector_rng.out;
+    
+    edge_detector_seed.in = slowerclock.value;
+    
+    temp_pointer = random_number.num[1:0];
+    
+    if(edge_detector_seed.out){
+      seed.d = seed.q + 1;
+    }
+    
+    case (random_number.num[1:0]){
+      b00 : out = b00;
+      b01 : out = b01;
+      b10 : out = b10;
+      b11 : out = b11;
+      
+    }
+    
+  }
+}

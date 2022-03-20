@@ -1,0 +1,1322 @@
+Warnings in file C:\Users\hazel\Desktop\__sutd_term4\50.002 Comp Struct\50.002-1D-GAME\source\game_beta.luc:
+    Line 204, Column 36 : The signal "game_alu.out" is wider than "players.write_data" and the most significant bits will be dropped
+    Line 202, Column 31 : The signal "game_alu.out" is wider than "players.write_data" and the most significant bits will be dropped
+Warnings in file C:\Users\hazel\Desktop\__sutd_term4\50.002 Comp Struct\50.002-1D-GAME\source\au_top.luc:
+    Line 11, Column 4 : "io_dip" was never used
+Starting Vivado...
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source {C:\Users\hazel\Desktop\__sutd_term4\50.002 Comp Struct\50.002-1D-GAME\work\project.tcl}
+# set projDir "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/vivado"
+# set projName "1d_game_v1"
+# set topName top
+# set device xc7a35tftg256-1
+# if {[file exists "$projDir/$projName"]} { file delete -force "$projDir/$projName" }
+# create_project $projName "$projDir/$projName" -part $device
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1'
+# set_property design_mode RTL [get_filesets sources_1]
+# set verilogSources [list "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/au_top_0.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/game_beta_1.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/reset_conditioner_2.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/rand_increment_3.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/button_conditioner_4.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/edge_detector_5.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/multi_seven_seg_6.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/multi_dec_ctr_7.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/alu_8.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/control_unit_9.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/regfile_10.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/counter_11.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/counter_12.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/counter_13.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/counter_14.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/counter_15.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/edge_detector_16.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/pn_gen_17.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/pipeline_18.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/counter_19.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/seven_seg_20.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/decoder_21.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/decimal_counter_22.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/sixteen_bit_adder_23.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/sixteen_bit_boolean_24.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/comparator_25.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/shifter_26.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/multiplier_27.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/adder_28.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/verilog/boolean_29.v" ]
+# import_files -fileset [get_filesets sources_1] -force -norecurse $verilogSources
+# set xdcSources [list "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/work/constraint/custom.xdc" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-1D-GAME/constraint/au_new.xdc" ]
+# read_xdc $xdcSources
+# set_property STEPS.WRITE_BITSTREAM.ARGS.BIN_FILE true [get_runs impl_1]
+# update_compile_order -fileset sources_1
+# launch_runs -runs synth_1 -jobs 8
+
+[Tue Dec  1 13:44:58 2020] Launched synth_1...
+Run output will be captured here: C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.runs/synth_1/runme.log
+# wait_on_run synth_1
+[Tue Dec  1 13:44:59 2020] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log au_top_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source au_top_0.tcl
+
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source au_top_0.tcl -notrace
+Command: synth_design -top au_top_0 -part xc7a35tftg256-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tftg256-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 14356
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1013.398 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'au_top_0' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/au_top_0.v:7]
+INFO: [Synth 8-6157] synthesizing module 'button_conditioner_4' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/button_conditioner_4.v:13]
+	Parameter CLK_FREQ bound to: 26'b10111110101111000010000000 
+	Parameter MIN_DELAY bound to: 5'b10100 
+	Parameter NUM_SYNC bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'pipeline_18' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/pipeline_18.v:11]
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'pipeline_18' (1#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/pipeline_18.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'button_conditioner_4' (2#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/button_conditioner_4.v:13]
+INFO: [Synth 8-6157] synthesizing module 'edge_detector_5' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/edge_detector_5.v:12]
+	Parameter RISE bound to: 1'b1 
+	Parameter FALL bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'edge_detector_5' (3#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/edge_detector_5.v:12]
+INFO: [Synth 8-6157] synthesizing module 'game_beta_1' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/game_beta_1.v:7]
+INFO: [Synth 8-6157] synthesizing module 'alu_8' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/alu_8.v:7]
+INFO: [Synth 8-6157] synthesizing module 'sixteen_bit_adder_23' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/sixteen_bit_adder_23.v:7]
+INFO: [Synth 8-6157] synthesizing module 'adder_28' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/adder_28.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'adder_28' (4#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/adder_28.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'sixteen_bit_adder_23' (5#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/sixteen_bit_adder_23.v:7]
+INFO: [Synth 8-6157] synthesizing module 'sixteen_bit_boolean_24' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/sixteen_bit_boolean_24.v:7]
+INFO: [Synth 8-6157] synthesizing module 'boolean_29' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/boolean_29.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'boolean_29' (6#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/boolean_29.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'sixteen_bit_boolean_24' (7#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/sixteen_bit_boolean_24.v:7]
+INFO: [Synth 8-6157] synthesizing module 'comparator_25' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/comparator_25.v:7]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/comparator_25.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'comparator_25' (8#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/comparator_25.v:7]
+INFO: [Synth 8-6157] synthesizing module 'shifter_26' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/shifter_26.v:7]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/shifter_26.v:32]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/shifter_26.v:46]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/shifter_26.v:58]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/shifter_26.v:71]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/shifter_26.v:84]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/shifter_26.v:97]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/shifter_26.v:110]
+INFO: [Synth 8-6155] done synthesizing module 'shifter_26' (9#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/shifter_26.v:7]
+INFO: [Synth 8-6157] synthesizing module 'multiplier_27' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/multiplier_27.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'multiplier_27' (10#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/multiplier_27.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'alu_8' (11#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/alu_8.v:7]
+INFO: [Synth 8-6157] synthesizing module 'control_unit_9' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/control_unit_9.v:7]
+	Parameter IDLE_game_fsm bound to: 6'b000000 
+	Parameter CHECK_RED_game_fsm bound to: 6'b000001 
+	Parameter CHECK_GREEN_game_fsm bound to: 6'b000010 
+	Parameter CHECK_BLUE_game_fsm bound to: 6'b000011 
+	Parameter BRANCH_RED_game_fsm bound to: 6'b000100 
+	Parameter BRANCH_GREEN_game_fsm bound to: 6'b000101 
+	Parameter BRANCH_BLUE_game_fsm bound to: 6'b000110 
+	Parameter CHECK_WHITE_RED_game_fsm bound to: 6'b000111 
+	Parameter CHECK_WHITE_GREEN_game_fsm bound to: 6'b001000 
+	Parameter CHECK_WHITE_BLUE_game_fsm bound to: 6'b001001 
+	Parameter BRANCH_WHITE_RED_game_fsm bound to: 6'b001010 
+	Parameter BRANCH_WHITE_GREEN_game_fsm bound to: 6'b001011 
+	Parameter BRANCH_WHITE_BLUE_game_fsm bound to: 6'b001100 
+	Parameter REMOVE_R0_DATA_game_fsm bound to: 6'b001101 
+	Parameter REMOVE_R1_DATA_game_fsm bound to: 6'b001110 
+	Parameter REMOVE_R2_DATA_game_fsm bound to: 6'b001111 
+	Parameter REMOVE_ALL_R0_DATA_game_fsm bound to: 6'b010000 
+	Parameter REMOVE_ALL_R1_DATA_game_fsm bound to: 6'b010001 
+	Parameter REMOVE_ALL_R2_DATA_game_fsm bound to: 6'b010010 
+	Parameter SUB_POINTER_game_fsm bound to: 6'b010011 
+	Parameter ADD_SCORE_game_fsm bound to: 6'b010100 
+	Parameter BRANCH_CHECK_SCORE_60_game_fsm bound to: 6'b010101 
+	Parameter BRANCH_CHECK_SCORE_30_game_fsm bound to: 6'b010110 
+	Parameter BRANCH_CHECK_SCORE_10_game_fsm bound to: 6'b010111 
+	Parameter BRANCH_CHECK_SCORE_0_game_fsm bound to: 6'b011000 
+	Parameter BRANCH_DIFF_1_game_fsm bound to: 6'b011001 
+	Parameter SET_DIFF_3_game_fsm bound to: 6'b011010 
+	Parameter SET_DIFF_2_game_fsm bound to: 6'b011011 
+	Parameter SET_DIFF_1_game_fsm bound to: 6'b011100 
+	Parameter SET_DIFF_0_game_fsm bound to: 6'b011101 
+	Parameter SHIFT_R0_ONE_game_fsm bound to: 6'b011110 
+	Parameter SHIFT_R1_ONE_game_fsm bound to: 6'b011111 
+	Parameter SHIFT_R2_ONE_game_fsm bound to: 6'b100000 
+	Parameter GENERATE_RAND_game_fsm bound to: 6'b100001 
+	Parameter BRANCH_CHECK_RAND_0_game_fsm bound to: 6'b100010 
+	Parameter BRANCH_CHECK_RAND_1_game_fsm bound to: 6'b100011 
+	Parameter BRANCH_CHECK_RAND_2_game_fsm bound to: 6'b100100 
+	Parameter BRANCH_CHECK_RAND_3_game_fsm bound to: 6'b100101 
+	Parameter ADD_ONE_RED_game_fsm bound to: 6'b100110 
+	Parameter ADD_ONE_GREEN_game_fsm bound to: 6'b100111 
+	Parameter ADD_ONE_BLUE_game_fsm bound to: 6'b101000 
+	Parameter ADD_ONE_ALL_RED_game_fsm bound to: 6'b101001 
+	Parameter ADD_ONE_ALL_GREEN_game_fsm bound to: 6'b101010 
+	Parameter ADD_ONE_ALL_BLUE_game_fsm bound to: 6'b101011 
+	Parameter ADD_POINTER_game_fsm bound to: 6'b101100 
+	Parameter CHECK_POINTER_game_fsm bound to: 6'b101101 
+	Parameter BRANCH_CHECK_POINTER_game_fsm bound to: 6'b101110 
+	Parameter RESET_REGISTERS_R0_game_fsm bound to: 6'b101111 
+	Parameter RESET_REGISTERS_R1_game_fsm bound to: 6'b110000 
+	Parameter RESET_REGISTERS_R2_game_fsm bound to: 6'b110001 
+	Parameter RESET_REGISTERS_R3_game_fsm bound to: 6'b110010 
+	Parameter RESET_REGISTERS_R4_game_fsm bound to: 6'b110011 
+	Parameter RESET_REGISTERS_R5_game_fsm bound to: 6'b110100 
+	Parameter RESET_REGISTERS_R6_game_fsm bound to: 6'b110101 
+	Parameter RESET_REGISTERS_R7_game_fsm bound to: 6'b110110 
+	Parameter GAMEOVER_game_fsm bound to: 6'b110111 
+	Parameter GAMEOVER_IDLE_game_fsm bound to: 6'b111000 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/control_unit_9.v:117]
+INFO: [Synth 8-6155] done synthesizing module 'control_unit_9' (12#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/control_unit_9.v:7]
+INFO: [Synth 8-6157] synthesizing module 'regfile_10' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/regfile_10.v:7]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/regfile_10.v:89]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/regfile_10.v:127]
+INFO: [Synth 8-6155] done synthesizing module 'regfile_10' (13#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/regfile_10.v:7]
+INFO: [Synth 8-6157] synthesizing module 'counter_11' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/counter_11.v:14]
+	Parameter SIZE bound to: 1'b1 
+	Parameter DIV bound to: 5'b11010 
+	Parameter TOP bound to: 1'b0 
+	Parameter UP bound to: 1'b1 
+	Parameter MAX_VALUE bound to: 27'b011111111111111111111111111 
+INFO: [Synth 8-6155] done synthesizing module 'counter_11' (14#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/counter_11.v:14]
+INFO: [Synth 8-6157] synthesizing module 'counter_12' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/counter_12.v:14]
+	Parameter SIZE bound to: 1'b1 
+	Parameter DIV bound to: 5'b11001 
+	Parameter TOP bound to: 1'b0 
+	Parameter UP bound to: 1'b1 
+	Parameter MAX_VALUE bound to: 26'b01111111111111111111111111 
+INFO: [Synth 8-6155] done synthesizing module 'counter_12' (15#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/counter_12.v:14]
+INFO: [Synth 8-6157] synthesizing module 'counter_13' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/counter_13.v:14]
+	Parameter SIZE bound to: 1'b1 
+	Parameter DIV bound to: 5'b11000 
+	Parameter TOP bound to: 1'b0 
+	Parameter UP bound to: 1'b1 
+	Parameter MAX_VALUE bound to: 25'b0111111111111111111111111 
+INFO: [Synth 8-6155] done synthesizing module 'counter_13' (16#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/counter_13.v:14]
+INFO: [Synth 8-6157] synthesizing module 'counter_14' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/counter_14.v:14]
+	Parameter SIZE bound to: 1'b1 
+	Parameter DIV bound to: 5'b10111 
+	Parameter TOP bound to: 1'b0 
+	Parameter UP bound to: 1'b1 
+	Parameter MAX_VALUE bound to: 24'b011111111111111111111111 
+INFO: [Synth 8-6155] done synthesizing module 'counter_14' (17#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/counter_14.v:14]
+INFO: [Synth 8-6157] synthesizing module 'counter_15' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/counter_15.v:14]
+	Parameter SIZE bound to: 1'b1 
+	Parameter DIV bound to: 5'b10100 
+	Parameter TOP bound to: 1'b0 
+	Parameter UP bound to: 1'b1 
+	Parameter MAX_VALUE bound to: 21'b011111111111111111111 
+INFO: [Synth 8-6155] done synthesizing module 'counter_15' (18#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/counter_15.v:14]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/game_beta_1.v:307]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/game_beta_1.v:361]
+INFO: [Synth 8-6155] done synthesizing module 'game_beta_1' (19#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/game_beta_1.v:7]
+INFO: [Synth 8-6157] synthesizing module 'reset_conditioner_2' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/reset_conditioner_2.v:11]
+	Parameter STAGES bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'reset_conditioner_2' (20#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/reset_conditioner_2.v:11]
+INFO: [Synth 8-6157] synthesizing module 'rand_increment_3' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/rand_increment_3.v:11]
+	Parameter SEED bound to: 128'b10000100001100100011001101010010001110100110000100111001011001100100001000111011011000100010010101100010010110010010110001100010 
+INFO: [Synth 8-6157] synthesizing module 'edge_detector_16' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/edge_detector_16.v:12]
+	Parameter RISE bound to: 1'b1 
+	Parameter FALL bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'edge_detector_16' (21#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/edge_detector_16.v:12]
+INFO: [Synth 8-6157] synthesizing module 'pn_gen_17' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/pn_gen_17.v:11]
+	Parameter SEED bound to: 128'b10000100001100100011001101010010001110100110000100111001011001100100001000111011011000100010010101100010010110010010110001100010 
+INFO: [Synth 8-6155] done synthesizing module 'pn_gen_17' (22#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/pn_gen_17.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'rand_increment_3' (23#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/rand_increment_3.v:11]
+INFO: [Synth 8-6157] synthesizing module 'multi_seven_seg_6' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/multi_seven_seg_6.v:12]
+	Parameter DIGITS bound to: 3'b100 
+	Parameter DIV bound to: 5'b10000 
+	Parameter DIGIT_BITS bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'counter_19' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/counter_19.v:14]
+	Parameter SIZE bound to: 2'b10 
+	Parameter DIV bound to: 5'b10000 
+	Parameter TOP bound to: 4'b0011 
+	Parameter UP bound to: 1'b1 
+	Parameter MAX_VALUE bound to: 20'b00111111111111111111 
+INFO: [Synth 8-6155] done synthesizing module 'counter_19' (24#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/counter_19.v:14]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg_20' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/seven_seg_20.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg_20' (25#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/seven_seg_20.v:7]
+INFO: [Synth 8-6157] synthesizing module 'decoder_21' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/decoder_21.v:11]
+	Parameter WIDTH bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'decoder_21' (26#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/decoder_21.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'multi_seven_seg_6' (27#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/multi_seven_seg_6.v:12]
+INFO: [Synth 8-6157] synthesizing module 'multi_dec_ctr_7' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/multi_dec_ctr_7.v:11]
+	Parameter DIGITS bound to: 3'b100 
+INFO: [Synth 8-6157] synthesizing module 'decimal_counter_22' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/decimal_counter_22.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'decimal_counter_22' (28#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/decimal_counter_22.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'multi_dec_ctr_7' (29#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/multi_dec_ctr_7.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'au_top_0' (30#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.srcs/sources_1/imports/verilog/au_top_0.v:7]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1013.398 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1013.398 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1013.398 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.147 . Memory (MB): peak = 1013.398 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc]
+Finished Parsing XDC File [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/au_top_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/au_top_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/constraint/au_new.xdc]
+Finished Parsing XDC File [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/constraint/au_new.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/constraint/au_new.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/au_top_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/au_top_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1013.398 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1013.398 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 1013.398 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tftg256-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 1013.398 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 1013.398 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'M_game_fsm_q_reg' in module 'control_unit_9'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+           IDLE_game_fsm |                           000000 |                           000000
+      CHECK_RED_game_fsm |                           000001 |                           000001
+     BRANCH_RED_game_fsm |                           000010 |                           000100
+CHECK_WHITE_GREEN_game_fsm |                           000011 |                           001000
+BRANCH_WHITE_GREEN_game_fsm |                           000100 |                           001011
+ REMOVE_R0_DATA_game_fsm |                           000101 |                           001101
+    CHECK_GREEN_game_fsm |                           000110 |                           000010
+   BRANCH_GREEN_game_fsm |                           000111 |                           000101
+CHECK_WHITE_BLUE_game_fsm |                           001000 |                           001001
+BRANCH_WHITE_BLUE_game_fsm |                           001001 |                           001100
+ REMOVE_R1_DATA_game_fsm |                           001010 |                           001110
+     CHECK_BLUE_game_fsm |                           001011 |                           000011
+    BRANCH_BLUE_game_fsm |                           001100 |                           000110
+CHECK_WHITE_RED_game_fsm |                           001101 |                           000111
+BRANCH_WHITE_RED_game_fsm |                           001110 |                           001010
+REMOVE_ALL_R0_DATA_game_fsm |                           001111 |                           010000
+REMOVE_ALL_R1_DATA_game_fsm |                           010000 |                           010001
+REMOVE_ALL_R2_DATA_game_fsm |                           010001 |                           010010
+ REMOVE_R2_DATA_game_fsm |                           010010 |                           001111
+    SUB_POINTER_game_fsm |                           010011 |                           010011
+      ADD_SCORE_game_fsm |                           010100 |                           010100
+   SHIFT_R0_ONE_game_fsm |                           010101 |                           011110
+   SHIFT_R1_ONE_game_fsm |                           010110 |                           011111
+   SHIFT_R2_ONE_game_fsm |                           010111 |                           100000
+  GENERATE_RAND_game_fsm |                           011000 |                           100001
+BRANCH_CHECK_RAND_0_game_fsm |                           011001 |                           100010
+BRANCH_CHECK_RAND_1_game_fsm |                           011010 |                           100011
+    ADD_ONE_RED_game_fsm |                           011011 |                           100110
+BRANCH_CHECK_RAND_2_game_fsm |                           011100 |                           100100
+  ADD_ONE_GREEN_game_fsm |                           011101 |                           100111
+BRANCH_CHECK_RAND_3_game_fsm |                           011110 |                           100101
+   ADD_ONE_BLUE_game_fsm |                           011111 |                           101000
+ADD_ONE_ALL_RED_game_fsm |                           100000 |                           101001
+ADD_ONE_ALL_GREEN_game_fsm |                           100001 |                           101010
+ADD_ONE_ALL_BLUE_game_fsm |                           100010 |                           101011
+    ADD_POINTER_game_fsm |                           100011 |                           101100
+  CHECK_POINTER_game_fsm |                           100100 |                           101101
+BRANCH_CHECK_POINTER_game_fsm |                           100101 |                           101110
+RESET_REGISTERS_R0_game_fsm |                           100110 |                           101111
+RESET_REGISTERS_R1_game_fsm |                           100111 |                           110000
+RESET_REGISTERS_R2_game_fsm |                           101000 |                           110001
+RESET_REGISTERS_R4_game_fsm |                           101001 |                           110011
+RESET_REGISTERS_R5_game_fsm |                           101010 |                           110100
+RESET_REGISTERS_R6_game_fsm |                           101011 |                           110101
+RESET_REGISTERS_R7_game_fsm |                           101100 |                           110110
+       GAMEOVER_game_fsm |                           101101 |                           110111
+  GAMEOVER_IDLE_game_fsm |                           101110 |                           111000
+RESET_REGISTERS_R3_game_fsm |                           101111 |                           110010
+BRANCH_CHECK_SCORE_60_game_fsm |                           110000 |                           010101
+BRANCH_CHECK_SCORE_30_game_fsm |                           110001 |                           010110
+     SET_DIFF_3_game_fsm |                           110010 |                           011010
+BRANCH_CHECK_SCORE_10_game_fsm |                           110011 |                           010111
+     SET_DIFF_2_game_fsm |                           110100 |                           011011
+BRANCH_CHECK_SCORE_0_game_fsm |                           110101 |                           011000
+     SET_DIFF_1_game_fsm |                           110110 |                           011100
+  BRANCH_DIFF_1_game_fsm |                           110111 |                           011001
+     SET_DIFF_0_game_fsm |                           111000 |                           011101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'M_game_fsm_q_reg' using encoding 'sequential' in module 'control_unit_9'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:42 ; elapsed = 00:00:53 . Memory (MB): peak = 1013.398 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[7].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[8].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[9].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[10].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[11].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[12].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[13].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[14].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[0].fa_gen_1[15].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[2].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[2].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[3].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[3].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[3].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[4].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[4].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[4].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[4].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[5].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[5].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[5].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[5].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[5].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[6].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[6].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[6].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[6].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[6].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[6].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[7].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[7].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[7].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[7].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[7].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[7].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[7].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[8].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[8].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[8].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[8].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[8].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[8].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[8].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[8].fa_gen_1[7].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[9].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[9].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[9].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[9].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[9].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[9].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[9].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[9].fa_gen_1[7].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[9].fa_gen_1[8].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[10].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[10].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[10].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[10].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[10].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[10].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[10].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[10].fa_gen_1[7].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[10].fa_gen_1[8].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[10].fa_gen_1[9].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[11].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[11].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[11].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[11].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[11].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[11].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[11].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[11].fa_gen_1[7].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[11].fa_gen_1[8].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[11].fa_gen_1[9].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[11].fa_gen_1[10].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[12].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[12].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[12].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[12].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[12].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[12].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[12].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[12].fa_gen_1[7].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[12].fa_gen_1[8].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[12].fa_gen_1[9].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[12].fa_gen_1[10].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[12].fa_gen_1[11].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[13].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[13].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[13].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[13].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[13].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[13].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[13].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'gameMachine/game_alu/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_28) to 'gameMachine/game_alu/alu_mul/fa_gen_0[13].fa_gen_1[7].fa'
+INFO: [Common 17-14] Message 'Synth 8-223' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   18 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 4     
+	   2 Input    3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 2     
+	   4 Input     32 Bit         XORs := 1     
+	   2 Input     16 Bit         XORs := 2     
+	   3 Input      1 Bit         XORs := 138   
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               18 Bit    Registers := 1     
+	               10 Bit    Registers := 8     
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input   18 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 22    
+	   4 Input   16 Bit        Muxes := 9     
+	   8 Input   10 Bit        Muxes := 3     
+	   2 Input   10 Bit        Muxes := 1     
+	   4 Input    6 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 3     
+	  57 Input    6 Bit        Muxes := 2     
+	  78 Input    6 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 5     
+	   2 Input    3 Bit        Muxes := 6     
+	  57 Input    3 Bit        Muxes := 5     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 22    
+	   2 Input    1 Bit        Muxes := 10    
+	  57 Input    1 Bit        Muxes := 5     
+	   8 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:37 . Memory (MB): peak = 1013.398 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:23 ; elapsed = 00:01:59 . Memory (MB): peak = 1013.398 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:29 ; elapsed = 00:02:06 . Memory (MB): peak = 1067.594 ; gain = 54.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:30 ; elapsed = 00:02:07 . Memory (MB): peak = 1077.684 ; gain = 64.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:38 ; elapsed = 00:02:16 . Memory (MB): peak = 1077.684 ; gain = 64.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:38 ; elapsed = 00:02:16 . Memory (MB): peak = 1077.684 ; gain = 64.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:38 ; elapsed = 00:02:17 . Memory (MB): peak = 1077.684 ; gain = 64.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:38 ; elapsed = 00:02:17 . Memory (MB): peak = 1077.684 ; gain = 64.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:38 ; elapsed = 00:02:17 . Memory (MB): peak = 1077.684 ; gain = 64.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:38 ; elapsed = 00:02:17 . Memory (MB): peak = 1077.684 ; gain = 64.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    82|
+|3     |LUT1   |    30|
+|4     |LUT2   |    80|
+|5     |LUT3   |    44|
+|6     |LUT4   |    85|
+|7     |LUT5   |    75|
+|8     |LUT6   |   200|
+|9     |MUXF7  |     2|
+|10    |FDRE   |   488|
+|11    |FDSE   |    55|
+|12    |IBUF   |     9|
+|13    |OBUF   |    87|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:38 ; elapsed = 00:02:17 . Memory (MB): peak = 1077.684 ; gain = 64.285
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:16 ; elapsed = 00:02:08 . Memory (MB): peak = 1077.684 ; gain = 64.285
+Synthesis Optimization Complete : Time (s): cpu = 00:01:38 ; elapsed = 00:02:17 . Memory (MB): peak = 1077.684 ; gain = 64.285
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1080.504 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 84 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1080.504 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+192 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:54 ; elapsed = 00:02:42 . Memory (MB): peak = 1080.504 ; gain = 67.105
+INFO: [Common 17-1381] The checkpoint 'C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.runs/synth_1/au_top_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file au_top_0_utilization_synth.rpt -pb au_top_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Dec  1 13:47:56 2020...
+[Tue Dec  1 13:48:01 2020] synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:00 ; elapsed = 00:03:02 . Memory (MB): peak = 1013.363 ; gain = 0.000
+# launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Dec  1 13:48:02 2020] Launched impl_1...
+Run output will be captured here: C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.runs/impl_1/runme.log
+# wait_on_run impl_1
+[Tue Dec  1 13:48:02 2020] Waiting for impl_1 to finish...
+
+
+*** Running vivado
+    with args -log au_top_0.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source au_top_0.tcl -notrace
+
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source au_top_0.tcl -notrace
+Command: link_design -top au_top_0 -part xc7a35tftg256-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a35tftg256-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1013.473 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 84 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Cannot set PACKAGE_PIN property of ports,  port io_led[0] can not be placed on PACKAGE_PIN B6 because the PACKAGE_PIN is occupied by port greenLED[7] [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:120]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Cannot set PACKAGE_PIN property of ports,  port io_led[2] can not be placed on PACKAGE_PIN A5 because the PACKAGE_PIN is occupied by port blueLED[7] [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:124]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Cannot set PACKAGE_PIN property of ports,  port io_led[14] can not be placed on PACKAGE_PIN E6 because the PACKAGE_PIN is occupied by port redLED[2] [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:148]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Cannot set PACKAGE_PIN property of ports,  port io_led[16] can not be placed on PACKAGE_PIN G2 because the PACKAGE_PIN is occupied by port greenLED[2] [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:152]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Cannot set PACKAGE_PIN property of ports,  port io_led[18] can not be placed on PACKAGE_PIN H2 because the PACKAGE_PIN is occupied by port blueLED[2] [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:156]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_dip[0] cannot be placed on D6 (IOB_X1Y88) because the pad is already occupied by terminal greenLED[5] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:168]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_dip[1] cannot be placed on D5 (IOB_X1Y87) because the pad is already occupied by terminal greenLED[6] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:171]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_dip[2] cannot be placed on F5 (IOB_X1Y74) because the pad is already occupied by terminal blueLED[5] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:174]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_dip[3] cannot be placed on E5 (IOB_X1Y73) because the pad is already occupied by terminal blueLED[6] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:177]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_dip[6] cannot be placed on D4 (IOB_X1Y76) because the pad is already occupied by terminal redLED[8] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:186]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_dip[7] cannot be placed on C4 (IOB_X1Y75) because the pad is already occupied by terminal redLED[9] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:189]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_dip[8] cannot be placed on E3 (IOB_X1Y78) because the pad is already occupied by terminal greenLED[8] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:192]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_dip[9] cannot be placed on D3 (IOB_X1Y77) because the pad is already occupied by terminal greenLED[9] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:195]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_dip[10] cannot be placed on C3 (IOB_X1Y86) because the pad is already occupied by terminal blueLED[8] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:198]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_dip[11] cannot be placed on C2 (IOB_X1Y85) because the pad is already occupied by terminal blueLED[9] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:201]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_dip[14] cannot be placed on M6 (IOB_X0Y12) because the pad is already occupied by terminal redLED[0] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:210]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_dip[15] cannot be placed on N6 (IOB_X0Y11) because the pad is already occupied by terminal redLED[1] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:213]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_dip[16] cannot be placed on H5 (IOB_X1Y64) because the pad is already occupied by terminal greenLED[0] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:216]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_dip[17] cannot be placed on H4 (IOB_X1Y63) because the pad is already occupied by terminal greenLED[1] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:219]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_dip[18] cannot be placed on J3 (IOB_X1Y58) because the pad is already occupied by terminal blueLED[0] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:222]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_dip[19] cannot be placed on H3 (IOB_X1Y57) because the pad is already occupied by terminal blueLED[1] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:225]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_dip[22] cannot be placed on K3 (IOB_X1Y52) because the pad is already occupied by terminal redLED[3] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:234]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_dip[23] cannot be placed on K2 (IOB_X1Y51) because the pad is already occupied by terminal redLED[4] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:237]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_button[0] cannot be placed on C6 (IOB_X1Y89) because the pad is already occupied by terminal redLED[6] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:240]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_button[1] cannot be placed on C7 (IOB_X1Y90) because the pad is already occupied by terminal redLED[5] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:243]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_button[3] cannot be placed on B7 (IOB_X1Y98) because the pad is already occupied by terminal redLED[7] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:249]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal io_button[4] cannot be placed on P11 (IOB_X0Y21) because the pad is already occupied by terminal sevenSeg[2] possibly due to user constraint [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:252]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Cannot set PACKAGE_PIN property of ports,  port io_sel[2] can not be placed on PACKAGE_PIN N9 because the PACKAGE_PIN is occupied by port greenLED[3] [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:259]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Cannot set PACKAGE_PIN property of ports,  port io_sel[3] can not be placed on PACKAGE_PIN P9 because the PACKAGE_PIN is occupied by port greenLED[4] [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:261]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Cannot set PACKAGE_PIN property of ports,  port io_seg[3] can not be placed on PACKAGE_PIN R6 because the PACKAGE_PIN is occupied by port blueLED[4] [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:269]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Cannot set PACKAGE_PIN property of ports,  port io_seg[4] can not be placed on PACKAGE_PIN R7 because the PACKAGE_PIN is occupied by port blueLED[3] [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc:271]
+Finished Parsing XDC File [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/constraint/custom.xdc]
+Parsing XDC File [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/constraint/au_new.xdc]
+Finished Parsing XDC File [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/constraint/au_new.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1013.473 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+7 Infos, 0 Warnings, 31 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 1013.473 ; gain = 0.000
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1013.473 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: cfcce6da
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 1243.383 ; gain = 229.910
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: cfcce6da
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.426 . Memory (MB): peak = 1445.258 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 13b292592
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.535 . Memory (MB): peak = 1445.258 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 15d1af6de
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.807 . Memory (MB): peak = 1445.258 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 32 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 15d1af6de
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.900 . Memory (MB): peak = 1445.258 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 15d1af6de
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1445.258 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 7a886f19
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1445.258 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |              32  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1445.258 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1505df06c
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1445.258 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 1505df06c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 1445.258 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1505df06c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1445.258 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1445.258 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1505df06c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1445.258 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+24 Infos, 0 Warnings, 31 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 1445.258 ; gain = 431.785
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.455 . Memory (MB): peak = 1445.258 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.runs/impl_1/au_top_0_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file au_top_0_drc_opted.rpt -pb au_top_0_drc_opted.pb -rpx au_top_0_drc_opted.rpx
+Command: report_drc -file au_top_0_drc_opted.rpt -pb au_top_0_drc_opted.pb -rpx au_top_0_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.runs/impl_1/au_top_0_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1445.258 ; gain = 0.000
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1445.258 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: a48ac416
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1445.258 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1445.258 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+WARNING: [Place 30-87] Partially locked IO Bus is found. Following components of the IO Bus io_button are not locked:  'io_button[4]'  'io_button[3]'  'io_button[1]'  'io_button[0]' 
+WARNING: [Place 30-87] Partially locked IO Bus is found. Following components of the IO Bus io_dip are not locked:  'io_dip[23]'  'io_dip[22]'  'io_dip[19]'  'io_dip[18]'  'io_dip[17]'  'io_dip[16]'  'io_dip[15]'  'io_dip[14]'  'io_dip[11]'  'io_dip[10]'  'io_dip[9]'  'io_dip[8]'  'io_dip[7]'  'io_dip[6]'  'io_dip[3]'  'io_dip[2]'  'io_dip[1]'  'io_dip[0]' 
+WARNING: [Place 30-87] Partially locked IO Bus is found. Following components of the IO Bus io_led are not locked:  'io_led[18]'  'io_led[16]'  'io_led[14]'  'io_led[2]'  'io_led[0]' 
+WARNING: [Place 30-87] Partially locked IO Bus is found. Following components of the IO Bus io_seg are not locked:  'io_seg[4]'  'io_seg[3]' 
+WARNING: [Place 30-87] Partially locked IO Bus is found. Following components of the IO Bus io_sel are not locked:  'io_sel[3]'  'io_sel[2]' 
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 33cea531
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1445.258 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1062e956e
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1445.258 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1062e956e
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1445.258 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1062e956e
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1445.258 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: ed75007b
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1445.258 ; gain = 0.000
+
+Phase 2.2 Global Placement Core
+
+Phase 2.2.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 35 LUTNM shape to break, 19 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 21, two critical 14, total 35, new lutff created 0
+INFO: [Physopt 32-775] End 1 Pass. Optimized 44 nets or cells. Created 35 new cells, deleted 9 existing cells and moved 0 existing cell
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1445.258 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |           35  |              9  |                    44  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |           35  |              9  |                    44  |           0  |           8  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: eadbedcc
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 1445.258 ; gain = 0.000
+Phase 2.2 Global Placement Core | Checksum: 808201f1
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 1445.258 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 808201f1
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 1445.258 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 3e7312ec
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 1445.258 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: f857e259
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 1445.258 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1ab8a3d5a
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 1445.258 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: fe3f69b9
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 1445.258 ; gain = 0.000
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 1c627fc58
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:15 . Memory (MB): peak = 1445.258 ; gain = 0.000
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: f00637f4
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 1445.258 ; gain = 0.000
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 15f276d19
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 1445.258 ; gain = 0.000
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 11e540dce
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 1445.258 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 11e540dce
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 1445.258 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 290fa5627
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.229 | TNS=-0.883 |
+Phase 1 Physical Synthesis Initialization | Checksum: 2465a199c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.170 . Memory (MB): peak = 1454.750 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 28516f9e6
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.182 . Memory (MB): peak = 1454.750 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 290fa5627
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:18 . Memory (MB): peak = 1454.750 ; gain = 9.492
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.516. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 17af81f01
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1454.750 ; gain = 9.492
+Phase 4.1 Post Commit Optimization | Checksum: 17af81f01
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1454.750 ; gain = 9.492
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 17af81f01
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1454.750 ; gain = 9.492
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 17af81f01
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1454.750 ; gain = 9.492
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1454.750 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: 1941bf6ec
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1454.750 ; gain = 9.492
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1941bf6ec
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1454.750 ; gain = 9.492
+Ending Placer Task | Checksum: 16f77f59d
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1454.750 ; gain = 9.492
+INFO: [Common 17-83] Releasing license: Implementation
+65 Infos, 5 Warnings, 31 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:26 . Memory (MB): peak = 1454.750 ; gain = 9.492
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.497 . Memory (MB): peak = 1454.754 ; gain = 0.004
+INFO: [Common 17-1381] The checkpoint 'C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.runs/impl_1/au_top_0_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file au_top_0_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.327 . Memory (MB): peak = 1454.754 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file au_top_0_utilization_placed.rpt -pb au_top_0_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file au_top_0_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1454.754 ; gain = 0.000
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+74 Infos, 5 Warnings, 31 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.901 . Memory (MB): peak = 1487.152 ; gain = 17.879
+INFO: [Common 17-1381] The checkpoint 'C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.runs/impl_1/au_top_0_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC PLIO-3] Placement Constraints Check for IO constraints: Partially locked IO Bus is found. Following components of the IO Bus io_button[4:0] are not locked:  io_button[4] io_button[3] io_button[1] io_button[0]
+WARNING: [DRC PLIO-3] Placement Constraints Check for IO constraints: Partially locked IO Bus is found. Following components of the IO Bus io_dip[23:0] are not locked:  io_dip[23] io_dip[22] io_dip[19] io_dip[18] io_dip[17] io_dip[16] io_dip[15] io_dip[14] io_dip[11] io_dip[10]  and 8 more (total of 19.)
+WARNING: [DRC PLIO-3] Placement Constraints Check for IO constraints: Partially locked IO Bus is found. Following components of the IO Bus io_led[23:0] are not locked:  io_led[18] io_led[16] io_led[14] io_led[2] io_led[0]
+WARNING: [DRC PLIO-3] Placement Constraints Check for IO constraints: Partially locked IO Bus is found. Following components of the IO Bus io_seg[7:0] are not locked:  io_seg[4] io_seg[3]
+WARNING: [DRC PLIO-3] Placement Constraints Check for IO constraints: Partially locked IO Bus is found. Following components of the IO Bus io_sel[3:0] are not locked:  io_sel[3] io_sel[2]
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 5 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: 7383b903 ConstDB: 0 ShapeSum: fbf43c9a RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 16c0d41df
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:44 . Memory (MB): peak = 1577.449 ; gain = 80.258
+Post Restoration Checksum: NetGraph: c03647b6 NumContArr: abd6fa29 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 16c0d41df
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:44 . Memory (MB): peak = 1577.461 ; gain = 80.270
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 16c0d41df
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:44 . Memory (MB): peak = 1583.469 ; gain = 86.277
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 16c0d41df
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:44 . Memory (MB): peak = 1583.469 ; gain = 86.277
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1feaf63e9
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:46 . Memory (MB): peak = 1588.512 ; gain = 91.320
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.627  | TNS=0.000  | WHS=-0.138 | THS=-6.301 |
+
+Phase 2 Router Initialization | Checksum: 1ab6e971c
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:46 . Memory (MB): peak = 1588.512 ; gain = 91.320
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 1080
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 1080
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 17d865c5d
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:47 . Memory (MB): peak = 1590.117 ; gain = 92.926
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 417
+ Number of Nodes with overlaps = 216
+ Number of Nodes with overlaps = 151
+ Number of Nodes with overlaps = 102
+ Number of Nodes with overlaps = 69
+ Number of Nodes with overlaps = 28
+ Number of Nodes with overlaps = 14
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.067 | TNS=-0.067 | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: e32c8d6d
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:59 . Memory (MB): peak = 1590.121 ; gain = 92.930
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 123
+ Number of Nodes with overlaps = 123
+ Number of Nodes with overlaps = 70
+ Number of Nodes with overlaps = 69
+ Number of Nodes with overlaps = 41
+ Number of Nodes with overlaps = 40
+ Number of Nodes with overlaps = 24
+ Number of Nodes with overlaps = 20
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.245  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 2415c221f
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:09 . Memory (MB): peak = 1591.141 ; gain = 93.949
+Phase 4 Rip-up And Reroute | Checksum: 2415c221f
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:09 . Memory (MB): peak = 1591.141 ; gain = 93.949
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 2415c221f
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:09 . Memory (MB): peak = 1591.141 ; gain = 93.949
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 2415c221f
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:09 . Memory (MB): peak = 1591.141 ; gain = 93.949
+Phase 5 Delay and Skew Optimization | Checksum: 2415c221f
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:09 . Memory (MB): peak = 1591.141 ; gain = 93.949
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1ff20deed
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:09 . Memory (MB): peak = 1591.141 ; gain = 93.949
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.325  | TNS=0.000  | WHS=0.134  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1ff20deed
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:09 . Memory (MB): peak = 1591.141 ; gain = 93.949
+Phase 6 Post Hold Fix | Checksum: 1ff20deed
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:09 . Memory (MB): peak = 1591.141 ; gain = 93.949
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.410747 %
+  Global Horizontal Routing Utilization  = 0.414237 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 21223e36d
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:09 . Memory (MB): peak = 1591.141 ; gain = 93.949
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 21223e36d
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:09 . Memory (MB): peak = 1592.133 ; gain = 94.941
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1e6e83671
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:01:10 . Memory (MB): peak = 1592.133 ; gain = 94.941
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.325  | TNS=0.000  | WHS=0.134  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 1e6e83671
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:01:10 . Memory (MB): peak = 1592.133 ; gain = 94.941
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:01:10 . Memory (MB): peak = 1592.133 ; gain = 94.941
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+89 Infos, 10 Warnings, 31 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:30 ; elapsed = 00:01:14 . Memory (MB): peak = 1592.133 ; gain = 104.980
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.442 . Memory (MB): peak = 1601.992 ; gain = 9.859
+INFO: [Common 17-1381] The checkpoint 'C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.runs/impl_1/au_top_0_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file au_top_0_drc_routed.rpt -pb au_top_0_drc_routed.pb -rpx au_top_0_drc_routed.rpx
+Command: report_drc -file au_top_0_drc_routed.rpt -pb au_top_0_drc_routed.pb -rpx au_top_0_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.runs/impl_1/au_top_0_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1625.008 ; gain = 23.016
+INFO: [runtcl-4] Executing : report_methodology -file au_top_0_methodology_drc_routed.rpt -pb au_top_0_methodology_drc_routed.pb -rpx au_top_0_methodology_drc_routed.rpx
+Command: report_methodology -file au_top_0_methodology_drc_routed.rpt -pb au_top_0_methodology_drc_routed.pb -rpx au_top_0_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-1D-GAME/work/vivado/1d_game_v1/1d_game_v1.runs/impl_1/au_top_0_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file au_top_0_power_routed.rpt -pb au_top_0_power_summary_routed.pb -rpx au_top_0_power_routed.rpx
+Command: report_power -file au_top_0_power_routed.rpt -pb au_top_0_power_summary_routed.pb -rpx au_top_0_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+101 Infos, 10 Warnings, 31 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file au_top_0_route_status.rpt -pb au_top_0_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file au_top_0_timing_summary_routed.rpt -pb au_top_0_timing_summary_routed.pb -rpx au_top_0_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file au_top_0_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file au_top_0_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file au_top_0_bus_skew_routed.rpt -pb au_top_0_bus_skew_routed.pb -rpx au_top_0_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Command: write_bitstream -force au_top_0.bit -bin_file
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC UCIO-1] Unconstrained Logical Port: 11 out of 96 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: io_button[1], io_button[0], io_led[18], io_led[16], io_led[14], io_led[2], io_led[0], io_seg[4], io_seg[3], io_sel[3], and io_sel[2].
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 1 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Bitstream compression saved 13734592 bits.
+Writing bitstream ./au_top_0.bit...
+Writing bitstream ./au_top_0.bin...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+120 Infos, 11 Warnings, 31 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 2039.875 ; gain = 404.906
+INFO: [Common 17-206] Exiting Vivado at Tue Dec  1 13:52:21 2020...
+[Tue Dec  1 13:52:28 2020] impl_1 finished
+wait_on_run: Time (s): cpu = 00:00:01 ; elapsed = 00:04:26 . Memory (MB): peak = 1013.363 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Dec  1 13:52:28 2020...
+
+Build aborted by user.
+
+Finished building project.

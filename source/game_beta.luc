@@ -1,0 +1,240 @@
+module game_beta (
+    input clk,  // clock
+    input rst,  // reset
+    input red_btn_input,
+    input green_btn_input,
+    input blue_btn_input,
+    input random_input[2],
+    
+    input score_10,
+    input score_30,
+    input score_60,
+    
+    //debug 
+    //input button_in,
+    output debug_out[10],
+    output debug_out_2[10],
+    output debug_out_3[10],
+    //output timer_out[10]
+    
+    output red_out[10],
+    output green_out[10],
+    output blue_out[10],
+    
+    output dec_score,
+    output dec_reset
+
+  ) {
+  
+  sig inputAlu_a[10];
+  sig inputAlu_b[10];
+
+  sig current_pointer[10];
+  sig rand_tenbits[10];
+  
+  sig overwrite_data[10];
+  
+  sig user_input[10];
+  
+  sig bitemask[10];
+  
+  //setup slow clock as input,one difficulty for now
+  
+  .clk(clk){
+    edge_detector clock_detector(#RISE(1), #FALL(0));
+    edge_detector game_over_clock_detector(#RISE(1), #FALL(0));
+    .rst(rst){
+      alu game_alu;
+      control_unit game_controlunit;
+      regfile players;
+      //add a slow clock timer to add (modularize), can retrieve back as a value
+      counter slow_timer_0(#SIZE(1),#DIV(26)); //1 block/s
+      counter slow_timer_1(#SIZE(1),#DIV(25)); //2 block/s
+      counter slow_timer_2(#SIZE(1),#DIV(24)); //4 block/s
+      counter slow_timer_3(#SIZE(1),#DIV(23)); //8 block/s
+      counter game_over_time(#SIZE(1), #DIV(20));
+      }
+    }
+
+  always {
+    inputAlu_a = 0;
+    inputAlu_b = 0;
+    rand_tenbits = 0;
+    players.score = 0;
+    players.score_in = b0;
+    game_controlunit.score_simulate = b0;
+    overwrite_data = 0;
+    user_input = 0;
+    bitemask = 0;
+    
+    //testing purpose, remove after finish
+    if(score_10){
+      players.score = b0000001010;
+      players.score_in = b1;
+      game_controlunit.score_simulate = b1;
+      }
+    else if(score_30){
+      players.score = b0000011110;
+      players.score_in = b1;
+      game_controlunit.score_simulate = b1;
+      }
+    else if (score_60){
+      players.score = b0000111100;
+      players.score_in = b1;
+      game_controlunit.score_simulate = b1;
+      }
+    
+    
+    //increase slow_clock each time
+    clock_detector.in = 0;
+    //game_controlunit.slow_clock_in = slow_timer.value;
+    game_controlunit.slow_clock_in = 0;
+    
+    //initialize WE for regfile
+    players.write_enable = game_controlunit.we_regfile;
+    players.write_address = game_controlunit.regfile_write_address;
+    
+    
+    //read address A and B
+    players.read_address_1 = game_controlunit.regfile_read_address_a;
+    players.read_address_2 = game_controlunit.regfile_read_address_b;
+    
+    
+    //bootstrap Ra & Rb data straight to FSM
+    game_controlunit.ra_data = players.ra_out;
+    game_controlunit.rb_data = players.rb_out;
+    
+    //feed constant pointer value to control_unit
+    game_controlunit.pointer_value = players.pointer_out;
+    
+    //red_btn_input
+    game_controlunit.red_btn_input = red_btn_input;
+    
+    //green_btn_input
+    game_controlunit.green_btn_input = green_btn_input;
+    
+    //blue_btn_input
+    game_controlunit.blue_btn_input = blue_btn_input;
+    
+    //current pointer
+    current_pointer = players.pointer_out;
+    
+    //section here is to MANUALLY OVERRIDE R0,R1,R2 registers //TESTING ONLY, does not work yet 
+       //power move here  bitmask used to GET RID OF MSB, user_input is to CHECK msb
+    
+   
+    // TODO: test if bitemask is correct or if it should be 1 bit to the left
+      case(players.pointer_out[3:0]){
+      b0000: bitemask = b0000000000; user_input = b0000000000; //user_input <= register 
+      b0001: bitemask = b0000000000; user_input = b0000000001; 
+      b0010: bitemask = b0000000001; user_input = b0000000010;
+      b0011: bitemask = b0000000011; user_input = b0000000100;
+      b0100: bitemask = b0000000111; user_input = b0000001000;
+      b0101: bitemask = b0000001111; user_input = b0000010000;
+      b0110: bitemask = b0000011111; user_input = b0000100000;
+      b0111: bitemask = b0000111111; user_input = b0001000000;
+      b1000: bitemask = b0001111111; user_input = b0010000000;
+      b1001: bitemask = b0011111111; user_input = b0100000000;
+      default: bitemask = b0000000000;
+      }
+    
+    //random input converted into 10 bits, have to put this into a ROM 
+    if(random_input == b00){
+      rand_tenbits = b0000000000; //write back direct Ra[2] = 1 red
+      }
+    else if(random_input == b01){
+      rand_tenbits = b0000000001; //write back direct Ra[3] = 1 green
+      }
+    else if(random_input == b10){
+      rand_tenbits = b0000000010; //write back direct Ra[4] = 1 blue
+      }
+    else if(random_input == b11){
+      rand_tenbits = b0000000011; //write back direct ALL
+      }
+    
+    //setting difficulty(speed) based on current_timer register
+    //maybe can modularize difficulty 
+    if(players.current_timer_out[1:0] == b00){ //DIFFICULTY = 0
+        clock_detector.in = slow_timer_0.value;
+        game_controlunit.slow_clock_in = clock_detector.out;
+      }
+    else if(players.current_timer_out[1:0] == b01){ //DIFFICULTY = 1
+        clock_detector.in = slow_timer_1.value;
+        game_controlunit.slow_clock_in = clock_detector.out;
+      }
+    else if (players.current_timer_out[1:0] == b10){ //DIFFICULTY = 2
+        clock_detector.in = slow_timer_2.value;
+        game_controlunit.slow_clock_in = clock_detector.out;
+      }
+    else {                                           //DIFFICULTY = 3
+        clock_detector.in = slow_timer_3.value;
+        game_controlunit.slow_clock_in = clock_detector.out;
+      }
+    
+    case(game_controlunit.asel){
+        b000: inputAlu_a = players.read_data_1; //reading Ra input
+        b001: inputAlu_a = user_input; //user input depends on pointer value
+        b010: inputAlu_a = b0000000001; //1 in binary 10 bits
+        b011: inputAlu_a = b0000001010; //10 in binary 10 bits
+        b100: inputAlu_a = b0000011110; //30 in binary 10 bits
+        b101: inputAlu_a = b0000111100; //60 in binary 10 bits
+        b110: inputAlu_a = b0000000000; //0 in binary 10 bits
+      }
+    
+    case(game_controlunit.bsel){
+      b000: inputAlu_b = players.read_data_2; //reading Rb input
+      b001: inputAlu_b = rand_tenbits; //reading random number
+      b010: inputAlu_b = b0000000000; //0 in binary 10 bits
+      b011: inputAlu_b = b0000000001; //1 in binary 10 bits
+      b100: inputAlu_b = b0000000010; //2 in binary 10 bits
+      b101: inputAlu_b = b0000000011; //3 in binary 10 bits
+      b110: inputAlu_b = b0000001011; //11 in binary 10 bits
+      b111: inputAlu_b = bitemask; //BITMASK for binary, used in removing of msb
+      }
+    
+    //ALU check
+    //Using 16 bits ALU
+    game_alu.a = inputAlu_a;
+    game_alu.b = inputAlu_b;
+    game_alu.alufn = game_controlunit.alufn; //outputs of ALU here
+    
+    case (game_controlunit.wdsel){
+      b1: players.write_data = game_alu.out; //selecting ALU output
+      b0: players.write_data = b0; //only in event of reset
+      default: players.write_data = game_alu.out;
+      }
+    
+    // setting game over clock to prevent user from accidentally starting new game
+    game_over_clock_detector.in = game_over_time.value;
+    game_controlunit.game_over_clock_in = game_over_clock_detector.out;
+      
+    //for debug purposes
+    debug_out = players.pointer_out; // players.row_red_out; //debug for checking red row
+    
+    //debug_out_2 = players.pointer_out; //debug for checking pointer value
+    //debug_out_2 = players.rand_register_out; 
+    //debug_out_2 = players.row_red_out;
+    
+    debug_out_2 = bitemask; // players.row_blue_out; //IMPORTANT: bitemask and user_input should be in sync 
+    
+    debug_out_3 = user_input; // players.row_green_out; 
+    
+    
+    red_out = players.row_red_out;
+    green_out = players.row_green_out;
+    blue_out = players.row_blue_out;
+    
+    dec_reset = game_controlunit.dec_rst;
+    dec_score = game_controlunit.dec_score;
+    //things that work & dont work (this is a comment in game_beta.luc)
+    //1. pointer increase to 10 then game over 
+    //2. shifting R0,R1,R2 content and adding based on generated bits
+    //3. updating random register from generated random bits
+    //4. score & difficulty relationship (hard coded several score inputs)
+    //5. (now testing) red,green,blue button input corresponding to pointer (trying with red now first)
+    //5.1 correct button input reduces pointer, BUT DOESNT REMOVE Rx bits. (edit in regfile)
+    //5.2 masking works, but does not reduce color corresponding to button press 
+    
+    
+  }
+}

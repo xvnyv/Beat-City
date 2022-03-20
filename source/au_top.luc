@@ -1,0 +1,108 @@
+module au_top (
+    input clk,              // 100MHz clock
+    input rst_n,            // reset button (active low)
+    output led [8],         // 8 user controllable LEDs
+    input usb_rx,           // USB->Serial input
+    output usb_tx,           // USB->Serial output
+    output io_led [3][8],   // LEDs on IO Shield
+    output io_seg [8],      // 7-segment LEDs on IO Shield
+    output io_sel [4],      // Digit select on IO Shield
+    input io_button [5],    // 5 buttons on IO Shield
+    input io_dip [3][8],    // DIP switches on IO Shield
+    input red,
+    input green,
+    input blue,
+    output redLED[10],
+    output greenLED[10],
+    output blueLED[10],
+    output sevenSeg[12]
+  ) {
+  
+  sig rst;                  // reset signal
+
+  .clk(clk) {
+    game_beta gameMachine(.rst(rst));
+    // The reset conditioner is used to synchronize the reset signal to the FPGA
+    // clock. This ensures the entire FPGA comes out of reset at the same time.
+    reset_conditioner reset_cond;
+    rand_increment random(.rst(rst));
+    button_conditioner buttoncond[6];
+    edge_detector buttondetector[6](#RISE(1), #FALL(0));
+    
+    multi_seven_seg seg(.rst(rst));
+    multi_dec_ctr dec_ctr;
+  }
+  
+  always {
+    reset_cond.in = ~rst_n; // input raw inverted reset signal
+    rst = reset_cond.out;   // conditioned reset
+    
+    led = 8h00;             // turn LEDs off
+    
+    io_led = 3x{{8h00}};    // turn LEDs off
+    io_seg = 8hff;          // turn segments off
+    io_sel = 4hf;           // select no digits
+    
+    usb_tx = usb_rx;        // echo the serial data
+    redLED = 0;
+    greenLED = 0;
+    blueLED = 0;
+    gameMachine.random_input = random.out;
+    //temporary add 0 red,green,blue input values
+    //gameMachine.red_btn_input = red;
+    gameMachine.green_btn_input = green;
+    gameMachine.blue_btn_input = blue;
+    
+    //simulating scores for and respective speeds
+    //testing purpose, remove after finish
+    buttoncond.in[0] = io_button[0];
+    buttondetector.in[0] = buttoncond.out[0];
+    gameMachine.score_10 = buttondetector.out[0];
+    
+    buttoncond.in[1] = io_button[1];
+    buttondetector.in[1] = buttoncond.out[1];
+    gameMachine.score_30 = buttondetector.out[1];
+    
+    buttoncond.in[2] = io_button[2];
+    buttondetector.in[2] = buttoncond.out[2];
+    gameMachine.score_60 = buttondetector.out[2];
+    
+    buttoncond.in[3] = red; //red input
+    buttondetector.in[3] = buttoncond.out[3];
+    gameMachine.red_btn_input = buttondetector.out[3];
+    
+    buttoncond.in[4] = green; //green input
+    buttondetector.in[4] = buttoncond.out[4];
+    gameMachine.green_btn_input = buttondetector.out[4];
+    
+    //buttoncond.in[5] = blue;
+    buttoncond.in[5] = blue; //blue input
+    buttondetector.in[5] = buttoncond.out[5];
+    gameMachine.blue_btn_input = buttondetector.out[5];
+    
+    //buttoncond.in[3] = io_button[3];
+    //buttondetector.in[3] = buttoncond.out[3];
+    //gameMachine.red_btn_input = buttondetector.out[3]; //temporary test button for game 
+
+    redLED = gameMachine.red_out;
+    greenLED = gameMachine.green_out;
+    blueLED = gameMachine.blue_out;
+    //io_led[0] = gameMachine.debug_out;
+    //io_led[1] = gameMachine.debug_out_2;
+    //io_led[2] = gameMachine.debug_out_3;
+    
+    io_led[0][3:0] = gameMachine.debug_out[3:0];
+    io_led[1] = gameMachine.debug_out_2[7:0];
+    io_led[2] = gameMachine.debug_out_3[7:0];
+    
+    //setting up 7 segments for score
+    dec_ctr.inc = gameMachine.dec_score;
+    dec_ctr.rst = gameMachine.dec_reset;
+    
+    seg.values = dec_ctr.digits;
+    io_seg = ~seg.seg;
+    io_sel = ~seg.sel;
+    sevenSeg[7:0] = ~seg.seg;
+    sevenSeg[11:8] = seg.sel;
+  }
+}
